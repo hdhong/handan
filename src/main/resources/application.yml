@@ -1,0 +1,19 @@
+#log
+logging:
+  config: classpath:logback-spring.xml
+  path: api-log/cn-handan-jzig/outerlink
+#log end
+
+ #报文保存地址
+message-file:
+  address:
+    outgoing: D:\\project_file\\cn-handan-jzig\\xml-file\\outgoing\\
+    incoming: D:\\project_file\\cn-handan-jzig\\xml-file\\incoming\\
+
+internal:
+  socket:
+    ip: 10.1.1.114
+    port: 881
+
+restful-api:
+  address: http://119.23.226.93:2001/api/customs_gate
