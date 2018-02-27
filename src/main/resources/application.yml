@@ -7,8 +7,8 @@ logging:
  #报文保存地址
 message-file:
   address:
-    outgoing: D:\\project_file\\cn-handan-jzig\\xml-file\\outgoing\\
-    incoming: D:\\project_file\\cn-handan-jzig\\xml-file\\incoming\\
+    outgoing: E:\\project_file\\cn-handan-jzig\\xml-file\\outgoing\\
+    incoming: E:\\project_file\\cn-handan-jzig\\xml-file\\incoming\\
 
 internal:
   socket:
