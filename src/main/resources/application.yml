@@ -16,4 +16,5 @@ internal:
     port: 881
 
 restful-api:
-  address: http://119.23.226.93:2001/api/customs_gate
+  #address: http://119.23.226.93:2001/api/customs_gate
+  address: http://119.23.226.94:2001/api/customs_gate

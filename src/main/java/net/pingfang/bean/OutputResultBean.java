@@ -1,7 +1,9 @@
 package net.pingfang.bean;
 
-/**
- * Created by leohe on 2017/8/31.
+
+/*
+ * 
+ * Created by hedong on 2018/3/26
  */
 public class OutputResultBean<T> {
     //状态值：0 极为成功，其他数值代表失败

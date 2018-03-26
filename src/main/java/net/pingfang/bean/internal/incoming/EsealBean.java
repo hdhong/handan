@@ -1,37 +1,37 @@
 package net.pingfang.bean.internal.incoming;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-/**
- * Created by leohe on 2017/7/8.
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sun.xml.txw2.annotation.XmlElement;
+
+/*
+ * 
+ * Created by hedong on 2018/3/26
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement
-@XmlType(name = "ESEAL", propOrder = { "esealId", "esealPW" })
+@XmlElement
+@XmlType(name = "ESEL",propOrder = {"esealId","esealPW"})
 public class EsealBean {
-    @JsonProperty(value = "ESEAL_ID")
-    private String esealId;
-    @JsonProperty(value = "ESEAL_PW")
-    private String esealPW;
+	@JsonProperty(value = "ESEL_ID")
+	private String esealId;
+	@JsonProperty(value = "ESEAL_PW")
+	private String eaealPW;
+	public String getEsealId() {
+		return esealId;
+	}
+	public void setEsealId(String esealId) {
+		this.esealId = esealId;
+	}
+	public String getEaealPW() {
+		return eaealPW;
+	}
+	public void setEaealPW(String eaealPW) {
+		this.eaealPW = eaealPW;
+	}
+	
+	
 
-    public String getEsealId() {
-        return esealId;
-    }
-
-    public void setEsealId(String esealId) {
-        this.esealId = esealId;
-    }
-
-    public String getEsealPW() {
-        return esealPW;
-    }
-
-    public void setEsealPW(String esealPW) {
-        this.esealPW = esealPW;
-    }
 }

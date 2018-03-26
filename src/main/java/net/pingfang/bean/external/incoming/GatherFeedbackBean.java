@@ -19,15 +19,14 @@ public class GatherFeedbackBean {
     public void setFeedbackInfo(FeedbackInfoBean feedbackInfo) {
         this.feedbackInfo = feedbackInfo;
     }
-
     @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
     public static class FeedbackInfoBean{
-        private String sessionId;
-        private String areaId;
-        private String channelId;
-        @JsonProperty(value = "i_e_flag")
-        private String ieFlag;
-        private String feedbackTime;
+    	private String sessionId;
+    	private String areaId;
+    	private String channelId;
+    	@JsonProperty(value = "i_e_flag")
+    	private String ieFlag;
+    	private String feedbackTime;
         private String checkResult;
         private String resultDescription;
         private String ledHint;
@@ -105,4 +104,5 @@ public class GatherFeedbackBean {
             this.printMessage = printMessage;
         }
     }
+ 
 }

@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.*;
 @XmlRootElement
 @XmlType(name = "RFID", propOrder = { "rfIdId", "rfIdDate" })
 public class RFIDBean {
-    @XmlElement(name="RFID_ID")
+    @XmlElement(name = "RFIS_ID")
     @JsonProperty(value = "RFID_ID")
     private String rfIdId;
     @XmlElement(name = "RFID_DATA")

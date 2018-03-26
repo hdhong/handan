@@ -25,13 +25,14 @@ public class Swagger2 {
                 .apis(RequestHandlerSelectors.basePackage("net.pingfang.controller"))
                 .paths(PathSelectors.any())
                 .build();
+                
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("对接服务")
-                .version("1.0.0")
-                .build();
+        		.title("对接服务")
+        		.version("1.0.0")
+        		.build();
     }
 
 }
