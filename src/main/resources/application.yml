@@ -1,20 +1,27 @@
-#log
 logging:
   config: classpath:logback-spring.xml
-  path: api-log/cn-handan-jzig/outerlink
-#log end
+  path: api-log/cn-yiwu-rfy/outerlink
 
- #报文保存地址
-message-file:
-  address:
-    outgoing: D:\\project_file\\cn-handan-jzig\\xml-file\\outgoing\\
-    incoming: D:\\project_file\\cn-handan-jzig\\xml-file\\incoming\\
 
-internal:
-  socket:
-    ip: 10.1.1.114
-    port: 881
+outerlink:
+  internal:
+    outgoing:
+      socket:
+        ip: 10.1.1.114
+        port: 881
+  outgoing-file:
+    address: D:\\project_file\\cn-yiwu-rfy\\xml-file\\outgoing\\
+  incoming-file:
+    address: D:\\project_file\\cn-yiwu-rfy\\xml-file\\incoming\\
 
-restful-api:
-  #address: http://119.23.226.93:2001/api/customs_gate
-  address: http://119.23.226.94:2001/api/customs_gate
+cn:
+  yiwu:
+    rfy:
+      station:
+        telegraph:
+          code: IUH
+        tmis:
+          code: 32539
+        name: 义乌西
+      images:
+        path: d:/img

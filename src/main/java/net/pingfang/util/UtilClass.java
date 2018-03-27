@@ -79,8 +79,8 @@ public class UtilClass {
      * @param date1
      * @param date2
      * @return
-     */
-	public static int differentDayByMillisecond(Date date1, Date date2) {
+     */               
+	public static int differentDaysByMillisecond(Date date1, Date date2) {
 		int days = (int) (((date2.getTime() - date1.getTime()))/(1000*3600*24));
 		return days;
 	}
@@ -195,4 +195,5 @@ public class UtilClass {
 		 gc.setTimeInMillis(stringToDate(date,dateFormat).getTime());
 		return dataTypeFactory.newXMLGregorianCalendar(gc);
 	}
+
 }
