@@ -3,6 +3,10 @@ package net.pingfang.util;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.ImageInputStream;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -14,6 +18,7 @@ import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.UUID;
 
@@ -178,4 +183,16 @@ public class UtilClass {
         }
 
     }
+
+	public static String dateToString(Date date, String dateFormat) {
+		SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
+		return sdf.format(date);
+	}
+
+	public static XMLGregorianCalendar stringToXMLGregorianCalendar(String date, String dateFormat) throws DatatypeConfigurationException, ParseException {
+		 DatatypeFactory dataTypeFactory = DatatypeFactory.newInstance();
+		 GregorianCalendar gc = new GregorianCalendar();
+		 gc.setTimeInMillis(stringToDate(date,dateFormat).getTime());
+		return dataTypeFactory.newXMLGregorianCalendar(gc);
+	}
 }

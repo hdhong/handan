@@ -6,6 +6,7 @@ package net.pingfang.util;
  */
 public class UtilConstant {
 	public static final String ENCODING_UTF = "UTF-8";
+    public static final String DATA_FORMAT_TYPE = "yyyy/MM/dd HH:mm:ss";
 	
 	 /*
     TG: T 抬杆，F 落杆
