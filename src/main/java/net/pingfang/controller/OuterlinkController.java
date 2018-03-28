@@ -63,7 +63,6 @@ public class OuterlinkController {
 	@Autowired
 	private LinkWithSocket linkWithSocket;
 
-	
 	@ApiOperation("采集报文")
 	@PostMapping("/save")
 	public OutputResultBean save(@RequestBody String xmlString) throws IOException {
@@ -87,17 +86,16 @@ public class OuterlinkController {
 
 			// 报文转换
 			ResultBean resultBean = convertToInputMessage(returnString, input);
-			//向内部服务发消息，用utf-8
+			// 向内部服务发消息，用utf-8
 			linkWithSocket.sendMessageBySocket(JaxbUtil.convertToXml(resultBean));
-			
 
-		  }catch (ParseException e){
-	            return OutputResultUtil.error(1,"日期格式出错("+UtilConstant.DATA_FORMAT_TYPE+")");
-	        }catch (DatatypeConfigurationException e){
-	            return OutputResultUtil.error(1,"转换XMLGregorianCalendar出错");
-	        }catch (Exception e){
-	            return OutputResultUtil.error(1,"发送WebService出错");
-	        }
+		} catch (ParseException e) {
+			return OutputResultUtil.error(1, "日期格式出错(" + UtilConstant.DATA_FORMAT_TYPE + ")");
+		} catch (DatatypeConfigurationException e) {
+			return OutputResultUtil.error(1, "转换XMLGregorianCalendar出错");
+		} catch (Exception e) {
+			return OutputResultUtil.error(1, "发送WebService出错");
+		}
 
 		return OutputResultUtil.success();
 	}

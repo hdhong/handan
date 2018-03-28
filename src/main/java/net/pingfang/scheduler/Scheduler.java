@@ -23,20 +23,25 @@ public class Scheduler {
 	private String incomingFileBackupFileAddr;
 	@Value("${outerlink.outgoing-file.address}")
 	private String outgoingFileBackupFileAddr;
+	@Value("${schedule.is_delete_file}")
+    private Boolean isDeleteFile;
 
 	//每天23点执行
 	@Scheduled(cron = "0 0 23 * * ?")
 	public void deleteFileDirectory() {
 		//删除备份文件
-		try {
-			doDelete(incomingFileBackupFileAddr);
-			doDelete(outgoingFileBackupFileAddr);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			logger.error(e.toString());
-		}
+		if(isDeleteFile) {
+			try {
+				doDelete(incomingFileBackupFileAddr);
+				doDelete(outgoingFileBackupFileAddr);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				logger.error(e.toString());
+			}
+			
 		
+		}
 		
 	}
 

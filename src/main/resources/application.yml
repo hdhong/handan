@@ -13,7 +13,10 @@ outerlink:
     address: D:\\project_file\\cn-yiwu-rfy\\xml-file\\outgoing\\
   incoming-file:
     address: D:\\project_file\\cn-yiwu-rfy\\xml-file\\incoming\\
-
+    
+schedule:
+  is_delete_file: false 
+  
 cn:
   yiwu:
     rfy:
